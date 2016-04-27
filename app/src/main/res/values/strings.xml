@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Strooper</string>
+    <string name="hintemail">Email o Nombre de Usuario</string>
+    <string name="hintpassword">Contraseña</string>
+    <string name="botonlogin">Ingresar</string>
+    <string name="opcion">Tambien Puedes Ingresar Usando</string>
+    <string name="facebook">Facebook</string>
+    <string name="gmail">Gmail</string>
+</resources>

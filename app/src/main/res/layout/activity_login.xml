@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.giral.agude.strooper.Login"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ltn_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_email"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <EditText
+            android:id="@+id/edtemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/hintemail"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <EditText
+            android:id="@+id/edtpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/hintpassword"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_boton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <Button
+            android:id="@+id/btn_ingresar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/botonlogin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_opc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/opcion"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_opciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="3.7">
+
+        <LinearLayout
+            android:id="@+id/ltn_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/facebook"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ltn_gmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_gmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/gmail"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ltn_footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5">
+    </LinearLayout>
+
+</LinearLayout>
