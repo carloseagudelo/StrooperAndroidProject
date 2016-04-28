@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -9,5 +10,49 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.giral.agude.strooper.Index">
+
+    <LinearLayout
+        android:id="@+id/lyt_uno"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_dos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_tres"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.9">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_cuatro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_cinco"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.7">
+
+    </LinearLayout>
+
+
+
+
+
 
 </LinearLayout>
