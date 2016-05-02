@@ -6,7 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by agude on 29/04/2016.
  */
-public class DataBaseHandler extends SQLiteOpenHelper {
+public class DataBaseHandler extends SQLiteOpenHelper
+{
 
     // Version de la base de datos
     private static final int DATABASE_VERSION = 1;

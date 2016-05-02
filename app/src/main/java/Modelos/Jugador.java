@@ -8,8 +8,4 @@ public class Jugador {
     public String nickname;
     public String email;
     public String password;
-
-
-
-
 }
