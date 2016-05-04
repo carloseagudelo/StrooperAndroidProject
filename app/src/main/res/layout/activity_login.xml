@@ -15,7 +15,8 @@
         android:id="@+id/ltn_banner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="3"
+        android:orientation="horizontal">
     </LinearLayout>
 
     <LinearLayout
@@ -67,10 +68,13 @@
         android:layout_height="match_parent"
         android:layout_weight="4">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/opcion"/>
+         <Button
+             android:id="@+id/btn_registrar"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="REGISTRAR"
+             android:onClick="registrar"
+             />
 
     </LinearLayout>
 
@@ -83,7 +87,7 @@
 
         <LinearLayout
             android:id="@+id/ltn_facebook"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -97,7 +101,7 @@
 
         <LinearLayout
             android:id="@+id/ltn_gmail"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -115,7 +119,8 @@
         android:id="@+id/ltn_footer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3.5">
+        android:layout_weight="3.5"
+        android:orientation="horizontal">
     </LinearLayout>
 
 </LinearLayout>

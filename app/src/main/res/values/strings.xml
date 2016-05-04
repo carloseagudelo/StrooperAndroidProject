@@ -8,4 +8,7 @@
     <string name="gmail">Gmail</string>
     <string name="bienHecho">Bien</string>
     <string name="malHecho">Mal</string>
+    <string name="Nombrejugador">Nombre Jugador:</string>
+    <string name="emailjugador">Email del Jugador:</string>
+    <string name="contraseñajugador">Contraseña del Jugador:</string>
 </resources>
