@@ -14,27 +14,33 @@ import android.widget.EditText;
 
 import android.widget.Toast;
 
+import Controlador.AccesoDatos;
 import Controlador.DialogoRegistro;
 
 public class Login extends AppCompatActivity {
     EditText email,password;
     @Override
+    
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        // Se instancia el boton creado en la vista, a nivel de la logica del programa
+
+        //region Se inicializan los componentes
         Button btn_login = (Button) findViewById(R.id.btn_ingresar);
-         email = (EditText) findViewById(R.id.edt_email);
-          password = (EditText) findViewById(R.id.edt_password);
+        email = (EditText) findViewById(R.id.edt_email);
+        password = (EditText) findViewById(R.id.edt_password);
+        //endregion
 
 
-        //Se crea el evento del boton btn_login
+        //region Se crea el evento del boton btn_login
         btn_login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if((email.getText().toString() != "") && (password.getText().toString() != "") )
                 {
-                    if((email.getText().toString().equals("leidy@gmail.com")) && (password.getText().toString().equals("leidy123")))
+                    String[] args = new String[]{email.getText().toString(), password.getText().toString()};
+                    AccesoDatos db = new AccesoDatos(v.getContext());
+                    if(db.login(args))
                     {
                         Toast.makeText(Login.this,"Bienvenida" + "leidy@gmail.com" + "eres  muy bonita y feita",Toast.LENGTH_SHORT).show();
                         Intent act2 = new Intent(v.getContext(), Index.class);
@@ -75,10 +81,13 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+    //endregion
 
 
+    //region evento del boton registrar
     public void registrar(View view) {
         DialogoRegistro dlg = new DialogoRegistro();
         dlg.onClick(view);
     }
+    //endregion
 }

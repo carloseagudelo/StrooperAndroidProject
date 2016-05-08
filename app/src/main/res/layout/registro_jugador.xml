@@ -128,9 +128,10 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/btn_registarJugador"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="XXX"/>
+                android:text="@string/registar"/>
 
         </LinearLayout>
 
@@ -140,9 +141,10 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/btn_cancelar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="yyy"/>
+                android:text="@string/cancelar"/>
 
         </LinearLayout>
 

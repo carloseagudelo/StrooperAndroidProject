@@ -10,7 +10,7 @@ public class DataBaseHandler extends SQLiteOpenHelper
 {
 
     // Version de la base de datos
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Nombre de la base de datos
     private static final String DATABASE_NAME = "Stroopper";
@@ -33,9 +33,13 @@ public class DataBaseHandler extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db) // Metodo que crea la(s) tabla(s) en la base de datos
     {
-        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_PLAYERS + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_EMAIL + " TEXT" + KEY_PASSWORD + " TEXT" + ")";
+        String CREATE_CONTACTS_TABLE =
+                "CREATE TABLE " + TABLE_PLAYERS
+                + "("
+                + KEY_NAME + " TEXT,"
+                + KEY_EMAIL + " TEXT,"
+                + KEY_PASSWORD + " TEXT"
+                + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
 
