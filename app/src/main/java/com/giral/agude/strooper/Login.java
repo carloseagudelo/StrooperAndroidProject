@@ -20,7 +20,7 @@ import Controlador.DialogoRegistro;
 public class Login extends AppCompatActivity {
     EditText email,password;
     @Override
-    
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);

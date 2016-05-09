@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ffffff</color>
+    <color name="verdeClaro">#54da52</color>
+    <color name="NaranjaClaro">#fd7701</color>
+    <color name="amarillo">#efeb0d</color>
+    <color name="gris">#bab4b4</color>
+    <color name="letras">#000000</color>
+    <color name="verdeBien">#1ab712</color>
+    <color name="rojoMal">#cf0e0e</color>
+    <color name="verdeBienPressed">#0a330b</color>
+    <color name="rojoMalPressed">#6c0504</color>
 </resources>

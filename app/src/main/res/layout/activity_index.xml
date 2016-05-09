@@ -17,7 +17,7 @@
         android:orientation="horizontal"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:background="@color/colorPrimary">
+        android:background="@color/verdeClaro">
     </LinearLayout>
 
     <LinearLayout
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:background="@color/colorPrimary">
+        android:background="@color/NaranjaClaro">
 
         <EditText
             android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:orientation="horizontal"
         android:layout_height="match_parent"
         android:layout_weight="1.9"
-        android:background="@color/colorPrimary">
+        android:background="@color/amarillo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,14 +96,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/segundos"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="100dp"
-                />
+                android:textColor="@color/letras"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -111,13 +112,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1.7">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:textColor="@color/letras"/>
 
         </LinearLayout>
 
@@ -126,12 +127,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1.5">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/letras"
                 android:textSize="40dp" />
 
         </LinearLayout>
@@ -144,7 +145,7 @@
         android:orientation="horizontal"
         android:layout_height="match_parent"
         android:layout_weight="1.7"
-        android:background="@color/colorPrimary">
+        android:background="@color/gris">
         
         <LinearLayout
             android:layout_width="match_parent"
@@ -155,7 +156,9 @@
                 android:id="@+id/btn_bien"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/bienHecho"/>
+                android:text="@string/bienHecho"
+                android:onClick="correcto"
+                android:background="@drawable/btn_circle_bien"/>
 
         </LinearLayout>
 
@@ -168,7 +171,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/malHecho"
-                android:id="@+id/btn_mal"/>
+                android:id="@+id/btn_mal"
+                android:onClick="error"/>
 
         </LinearLayout>
 
