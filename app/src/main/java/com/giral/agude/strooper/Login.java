@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity {
                     AccesoDatos db = new AccesoDatos(v.getContext());
                     if(db.login(args))
                     {
-                        Toast.makeText(Login.this,"Bienvenida" + "leidy@gmail.com" + "eres  muy bonita y feita",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "El juego iniciara en poco, este atento, solo tendra tres segundos para responser y solo posee tres vidas", Toast.LENGTH_LONG);
                         Intent act2 = new Intent(v.getContext(), Index.class);
                         act2.putExtra("email",email.getText().toString());
                         startActivity(act2);
@@ -82,7 +82,6 @@ public class Login extends AppCompatActivity {
         });
     }
     //endregion
-
 
     //region evento del boton registrar
     public void registrar(View view) {
