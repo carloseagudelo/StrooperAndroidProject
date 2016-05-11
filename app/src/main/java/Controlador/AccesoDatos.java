@@ -11,17 +11,19 @@ import Datos.DataBaseHandler;
 import Modelos.Jugador;
 
 /**
- * Created by agude on 04/05/2016.
+ * Created by Carlos Enrique Agudelo on 04/05/2016.
  */
 
 public class AccesoDatos extends DataBaseHandler {
 
-    // Constructor de la clase
-    public AccesoDatos(Context context) {
+    //region Constructor de la clase
+    public AccesoDatos(Context context)
+    {
         super(context);
     }
+    //endregion
 
-    // Metodo que almacena la información del Jugador
+    //region Metodo que almacena la información del Jugador
     public void registrarJugador(Jugador jugador)
     {
         SQLiteDatabase db = getWritableDatabase();
@@ -32,19 +34,23 @@ public class AccesoDatos extends DataBaseHandler {
         db.insert("players",null,ctx);
         db.close();
     }
+    //endregion
 
-    public boolean login (String[] args)
+    //region Metodo para realizar el login de la aplicación
+    public String login (String[] args)
     {
-        String query = "Select * FROM  players "  + " WHERE email" + " ==  \"" + args[0] + "\"" + " AND password"  + " ==  \"" + args[1] + "\"";
+        String query = "Select name FROM  players "  + " WHERE email" + " ==  \"" + args[0] + "\"" + " AND password"  + " ==  \"" + args[1] + "\"";
+
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(query, null);
-        if(c.getCount() > 0)
+        if(c.moveToFirst())
         {
-            return true;
+            return c.getString(c.getColumnIndex("name"));
         }
         else
         {
-            return false;
+            return "";
         }
     }
+    //endregion
 }

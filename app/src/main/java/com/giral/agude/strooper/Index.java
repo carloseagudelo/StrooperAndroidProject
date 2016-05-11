@@ -2,6 +2,8 @@ package com.giral.agude.strooper;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,9 +15,11 @@ import android.widget.Toast;
 
 public class Index extends AppCompatActivity {
 
+    //region Variables globales
     Chronometer mChronometer;
     Integer vidas = 3;
-    TextView segundos;
+    TextView segundos, nombreJugador, colorLetra;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,36 +28,50 @@ public class Index extends AppCompatActivity {
 
         //region Inicializando los componentes
         segundos = (TextView) findViewById(R.id.segundos);
-        TextView colorLetra = (TextView) findViewById(R.id.letrasColor);
+        colorLetra  = (TextView) findViewById(R.id.letrasColor);
+        nombreJugador = (TextView) findViewById(R.id.nombre_jugador);
+        segundos.setText("5");
+        colorLetra.setText("INICIAR JUEGO");
         //endregion
-        segundos.setText("3");
-        new AlertDialog.Builder(Index.this)
-                .setTitle("Empezar")
-                .setMessage("El juego consta de 3 segundos para confirmar o desconfirmar lo mostrado, cuenta con tres vidas" )
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        InicializarCronometro();
-                    }
-                })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+        //region Recibe lo que se manda el formulario anterior
+        Intent iin = getIntent();
+        Bundle b = iin.getExtras();
+        String j =(String) b.get("name");
+        nombreJugador.setText(j);
+        //endregion
     }
 
     //region Metodo que inicializa un contador de 3 segundos
-    private void InicializarCronometro()
-    {
-        int contador = 30000;
-        while(contador > 0)
+    CountDownTimer cuenta;
+    int seg = 4;
+    public void iniciarCuentaAtras(){
+        cuenta = new CountDownTimer(5 * 1000, 1000)
         {
-            segundos.setText(Integer.toString(contador));
-            contador = contador - 1;
+            public void onTick(long milisegundos)
+            {
+                seg = (int) (milisegundos / 1000);
+                segundos.setText("" + (seg - 1));
+            }
+            public void onFinish()
+            {
+                if (vidas > 0)
+                {
+                    iniciarCuentaAtras();
+                    vidas--;
+                }
+            }
+        };
+        cuenta.start();
+    }
+    //endregion
+
+    //region Evento del textView para iniciar el juego
+    public void iniciarJuego(View view)
+    {
+        if(colorLetra.getText().toString().equalsIgnoreCase("INICIAR JUEGO"))
+        {
+            iniciarCuentaAtras();
         }
     }
     //endregion

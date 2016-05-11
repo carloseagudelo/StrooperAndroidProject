@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:id="@+id/frm_registrar"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,32 +18,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_weight="1.2">
+        android:layout_weight="1.2"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
+            android:layout_weight="1"
+            android:gravity="center_vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="40dp"
+
                 android:text="@string/Nombrejugador"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
 
-        </LinearLayout>1
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            >
 
             <EditText
                 android:id="@+id/edt_nombreRegistro"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:textColor="@color/letras"/>
 
         </LinearLayout>
 
@@ -64,6 +69,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="40dp"
                 android:text="@string/emailjugador"
+
                 android:textAlignment="center"
                 android:textSize="20dp"/>
 
@@ -77,6 +83,7 @@
             <EditText
                 android:id="@+id/edt_emailRegitro"
                 android:layout_width="match_parent"
+                android:textColor="@color/letras"
                 android:layout_height="match_parent" />
 
         </LinearLayout>
@@ -110,6 +117,7 @@
 
             <EditText
                 android:id="@+id/edt_passwordRegistro"
+                android:textColor="@color/letras"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -131,7 +139,9 @@
                 android:id="@+id/btn_registarJugador"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/registar"/>
+                android:text="@string/registar"
+                android:textSize="18dp"
+                android:textStyle="normal" />
 
         </LinearLayout>
 
@@ -144,6 +154,7 @@
                 android:id="@+id/btn_cancelar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="18dp"
                 android:text="@string/cancelar"/>
 
         </LinearLayout>
