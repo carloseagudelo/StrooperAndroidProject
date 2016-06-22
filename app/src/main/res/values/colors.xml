@@ -11,4 +11,10 @@
     <color name="verdeBienPressed">#0a330b</color>
     <color name="rojoMalPressed">#6c0504</color>
     <color name="Fondo">#b6c9da</color>
+
+    <!-- Colores para el array -->
+    <color name="Verde">#3e8c30</color>
+    <color name="Azul">#061cde</color>
+    <color name="Naranja">#ec392c</color>
+    <color name="Rojo">#6b0404</color>
 </resources>
